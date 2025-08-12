@@ -15,7 +15,7 @@ variable "ssh_username" {
 
 source "oracle-oci" "ubuntu-nginx" {
   compartment_id = var.compartment_ocid
-  source_ocid    = "ocid1.image.oc1.ap-hyderabad-1.xxxxx" # Replace with base Ubuntu image OCID
+  source_ocid    = "ocid1.image.oc1.ap-hyderabad-1.aaaaaaaafs7imfvcicboqisaisiz5bbpuzbg5gicwjwvyhnhsvdaowuc3w4q"
   shape          = "VM.Standard.E2.1.Micro"
   ssh_username   = var.ssh_username
   subnet_ocid    = var.subnet_ocid
