@@ -7,14 +7,6 @@ packer {
   }
 }
 
-variable "ssh_private_key_file" {
-  default = "/home/ubuntu/.ssh/oci_key"
-}
-
-variable "ssh_public_key_file" {
-  default = "/home/ubuntu/.ssh/oci_key.pub"
-}
-
 source "oracle-oci" "ubuntu-nginx" {
   compartment_ocid     = "ocid1.tenancy.oc1..aaaaaaaa6jvn6ty3gevdog7phzcnbh7x3ek4suj4cwyd7imjhe62qwv7x2iq"
   subnet_ocid          = "ocid1.subnet.oc1.ap-hyderabad-1.aaaaaaaa4nwj6qaqilt7vfwfgq5ygal266s57effy6hotkv3lozgitdesviq"
@@ -22,7 +14,7 @@ source "oracle-oci" "ubuntu-nginx" {
   shape                = "VM.Standard.E2.1.Micro"
   base_image_ocid      = "ocid1.image.oc1.ap-hyderabad-1.aaaaaaaafs7imfvcicboqisaisiz5bbpuzbg5gicwjwvyhnhsvdaowuc3w4q"
   ssh_username         = "ubuntu"
-  ssh_private_key_file = var.ssh_private_key_file
+  ssh_private_key_file = "/var/lib/jenkins/oci_api_key.pem"
 }
 
 build {
