@@ -7,11 +7,6 @@ packer {
   }
 }
 
-variable "compartment_ocid" {}
-variable "subnet_ocid" {}
-variable "ssh_username" {
-  default = "ubuntu"
-}
 variable "ssh_private_key_file" {
   default = "/home/ubuntu/.ssh/oci_key"
 }
