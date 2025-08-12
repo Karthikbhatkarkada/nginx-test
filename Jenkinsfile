@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    environment {
-        COMPARTMENT_OCID = credentials('oci_compartment_ocid') // Add in Jenkins
-        SUBNET_OCID      = credentials('oci_subnet_ocid')      // Add in Jenkins
+//    environment {
+//        COMPARTMENT_OCID = credentials('oci_compartment_ocid') // Add in Jenkins
+//        SUBNET_OCID      = credentials('oci_subnet_ocid')      // Add in Jenkins
     }
 
     stages {
